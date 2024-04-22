@@ -17,18 +17,21 @@ import { PreviewSpreadsheetChanges } from "./components/PreviewSpreadsheetChange
 
 const HomePage = () => {
   return (
+
     <CopilotKit url="/api/copilotkit">
       <CopilotSidebar
         instructions={INSTRUCTIONS}
         labels={{
           initial: "Welcome to the spreadsheet app! How can I help you?",
         }}
+        cloud_guardrails={{...}}
         defaultOpen={true}
         clickOutsideToClose={false}
       >
         <Main />
       </CopilotSidebar>
     </CopilotKit>
+    
   );
 };
 
