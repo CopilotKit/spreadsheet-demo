@@ -14,18 +14,23 @@ import { INSTRUCTIONS } from "./instructions";
 
 const HomePage = () => {
   return (
+
     <CopilotKit url="/api/copilotkit">
       <CopilotSidebar
         instructions={INSTRUCTIONS}
         labels={{
           initial: "Welcome to the spreadsheet app! How can I help you?",
         }}
+        cloud_guardrails={...}
+        cloud_memoryAndHistory={true}
         defaultOpen={true}
         clickOutsideToClose={false}
+        cloud_selfLearning={true}
       >
         <Main />
       </CopilotSidebar>
     </CopilotKit>
+    
   );
 };
 
